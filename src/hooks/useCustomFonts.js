@@ -5,6 +5,7 @@ import * as SplashScreen from "expo-splash-screen";
 export const useCustomFonts = () => {
 	const [fontsLoaded] = useFonts({
 		'Inter-Bold': require('../../assets/fonts/Inter-Bold.ttf'),
+		'Inter-Medium': require('../../assets/fonts/Inter-Medium.ttf'),
 	});
 
 	useEffect(() => {
