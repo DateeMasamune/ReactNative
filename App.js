@@ -1,6 +1,6 @@
 import { StyleSheet, View } from 'react-native';
 import { useCustomFonts } from "./src/hooks/useCustomFonts";
-import { Header } from "./src/components/Header/Header";
+import { One } from "./src/pages/One/One";
 
 export default function App() {
 	const {fontsLoaded, onLayoutRootView} = useCustomFonts()
@@ -11,7 +11,7 @@ export default function App() {
 
 	return (
     <View style={styles.container} onLayout={onLayoutRootView}>
-			<Header />
+			<One />
     </View>
   );
 }
@@ -20,5 +20,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#171717',
-  }
+  },
 });
