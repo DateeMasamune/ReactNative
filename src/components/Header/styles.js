@@ -11,7 +11,9 @@ export const headerStyles = StyleSheet.create({
 	},
 	title: {
 		color: '#FFFFFF',
-		marginRight: 170,
-		fontFamily: 'Inter-Bold'
+		marginRight: 100,
+		fontFamily: 'Inter-Bold',
+		fontSize: 22,
+		lineHeight: 22
 	}
 })
