@@ -1,11 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { useCustomFonts } from "./src/hooks/useCustomFonts";
+import { Header } from "./src/components/Header/Header";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+	const {fontsLoaded, onLayoutRootView} = useCustomFonts()
+
+	if (!fontsLoaded) {
+		return null;
+	}
+
+	return (
+    <View style={styles.container} onLayout={onLayoutRootView}>
+			<Header />
     </View>
   );
 }
@@ -13,8 +19,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    backgroundColor: '#171717',
+  }
 });
