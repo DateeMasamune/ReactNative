@@ -1,7 +1,7 @@
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { BottomMenu } from "../../Components/BottomMenu/BottomMenu";
-import { ItemAsset } from "./ItemAsset/ItemAsset";
-import { mockAssets } from "./mockAssets";
+import { ItemAsset } from "../../Components/ItemAsset/ItemAsset";
+import { mockAssets } from "../../mockData";
 
 import { OneStyle } from "./style";
 

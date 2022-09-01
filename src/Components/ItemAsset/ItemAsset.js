@@ -1,5 +1,5 @@
 import { View, Image, Text } from "react-native-web";
-import { OneStyle } from "../style";
+import { OneStyle } from "../../pages/One/style";
 
 export const ItemAsset = ({ icon, name, cutName, dollar, percent }) => (
   <View style={OneStyle.itemAsset}>
