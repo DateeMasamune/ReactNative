@@ -59,7 +59,6 @@ export const OneStyle = StyleSheet.create({
 		marginRight: 10
 	},
 	listTitle: {
-		justifyContent: 'center',
 		flexDirection: 'row',
 		justifyContent: 'space-between',
 		marginLeft: 24,
