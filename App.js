@@ -15,7 +15,7 @@ export default function App() {
 
 	return (
     <View style={styles.container} onLayout={onLayoutRootView}>
-			{/*<One />*/}
+			<One />
 			{/*<Two />*/}
 			{/*<Three />*/}
 			{/*<Four />*/}
