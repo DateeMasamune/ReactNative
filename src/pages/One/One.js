@@ -1,9 +1,10 @@
-import { Image, Text, TouchableOpacity, View } from "react-native";
+import { Image, Text, View } from "react-native";
 import { BottomMenu } from "../../Components/BottomMenu/BottomMenu";
 import { ItemAsset } from "../../Components/ItemAsset/ItemAsset";
 import { mockAssets } from "../../mockData";
 
 import { OneStyle } from "./style";
+import { ButtonTouchable } from "../../Components/ButtonTouchable/ButtonTouchable";
 
 export const One = () => (
 	<>
@@ -16,18 +17,14 @@ export const One = () => (
 			<Image style={OneStyle.portfolioImg} source={require('../../../assets/portfolio.png')} />
 		</View>
 		<View style={OneStyle.buttonsBlock}>
-			<TouchableOpacity
-				style={OneStyle.button}
-			>
-				<Image style={OneStyle.buttonImg} source={require('../../../assets/Document.png')}></Image>
-				<Text style={OneStyle.buttonText}>Operations</Text>
-			</TouchableOpacity>
-			<TouchableOpacity
-				style={OneStyle.button}
-			>
-				<Image style={OneStyle.buttonImg} source={require('../../../assets/Heart.png')}></Image>
-				<Text style={OneStyle.buttonText}>Favourites</Text>
-			</TouchableOpacity>
+			<ButtonTouchable
+				image={require('../../../assets/Document.png')}
+				text={'Operations'}
+			/>
+			<ButtonTouchable
+				image={require('../../../assets/Heart.png')}
+				text={'Favourites'}
+			/>
 		</View>
 		<View style={OneStyle.listTitle}>
 			<Text style={OneStyle.listTitleAssets}>

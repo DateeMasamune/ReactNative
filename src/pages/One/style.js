@@ -39,25 +39,6 @@ export const OneStyle = StyleSheet.create({
 		paddingLeft: 24,
 		paddingRight: 24
 	},
-	button: {
-		marginTop: 7,
-		borderRadius: 16,
-		height: 56,
-		width: 156,
-		backgroundColor: '#444444',
-		alignItems: 'center',
-		justifyContent: 'center',
-		flexDirection: 'row'
-	},
-	buttonText: {
-		color: '#FFFFFF',
-		fontFamily: 'Inter-Medium'
-	},
-	buttonImg: {
-		height: 16,
-		width: 15,
-		marginRight: 10
-	},
 	listTitle: {
 		flexDirection: 'row',
 		justifyContent: 'space-between',
