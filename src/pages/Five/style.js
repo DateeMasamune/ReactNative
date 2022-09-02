@@ -107,7 +107,7 @@ export const FiveStyle = StyleSheet.create({
   inputEnterMsg: {
     paddingLeft: 16,
     height: 46,
-    width: 263,
+    width: '70vw',
     backgroundColor: '#444444',
     borderRadius: 16,
     fontSize: 14,
@@ -126,11 +126,11 @@ export const FiveStyle = StyleSheet.create({
     alignItems: 'center',
     position: 'fixed',
     bottom: 32,
-    maxWidth: 327,
-    left: 'calc(50% - 162.5px)'
+    width: '100vw',
   },
   enterMsg: {
-    position: 'relative'
+    position: 'relative',
+    width: '70vw'
   },
   inputEnterMsgIcon: {
     height: 15,
