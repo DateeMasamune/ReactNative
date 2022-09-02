@@ -71,6 +71,7 @@ export const ThreeStyle = StyleSheet.create({
 	buttonDetailBlock: {
 		flexDirection: 'row',
 		justifyContent: 'space-between',
-		width: 327
+		width: 327,
+		marginTop: 62
 	}
 })
