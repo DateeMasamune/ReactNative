@@ -4,6 +4,7 @@ import { One } from "./src/pages/One/One";
 import { Two } from "./src/pages/Two/Two";
 import { Three } from "./src/pages/Three/Three";
 import { Four } from "./src/pages/Four/Four";
+import { Five } from "./src/pages/Five/Five";
 
 export default function App() {
 	const {fontsLoaded, onLayoutRootView} = useCustomFonts()
@@ -17,7 +18,8 @@ export default function App() {
 			{/*<One />*/}
 			{/*<Two />*/}
 			{/*<Three />*/}
-			<Four />
+			{/*<Four />*/}
+			<Five />
     </View>
   );
 }
