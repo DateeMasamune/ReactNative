@@ -7,26 +7,26 @@ import { Four } from "./src/pages/Four/Four";
 import { Five } from "./src/pages/Five/Five";
 
 export default function App() {
-	const {fontsLoaded, onLayoutRootView} = useCustomFonts()
+	const { fontsLoaded, onLayoutRootView } = useCustomFonts()
 
 	if (!fontsLoaded) {
 		return null;
 	}
 
 	return (
-    <View style={styles.container} onLayout={onLayoutRootView}>
-			<One />
+		<View style={styles.container} onLayout={onLayoutRootView}>
+			{/* <One /> */}
 			{/*<Two />*/}
 			{/*<Three />*/}
 			{/*<Four />*/}
 			<Five />
-    </View>
-  );
+		</View>
+	);
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#171717',
-  },
+	container: {
+		flex: 1,
+		backgroundColor: '#171717',
+	},
 });
