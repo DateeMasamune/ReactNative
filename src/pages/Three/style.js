@@ -64,5 +64,13 @@ export const ThreeStyle = StyleSheet.create({
 	detailPageChartContainer: {
 		justifyContent: 'center',
 		alignItems: 'center'
+	},
+	chipsDetail: {
+		marginTop: 41
+	},
+	buttonDetailBlock: {
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+		width: 327
 	}
 })

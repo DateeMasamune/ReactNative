@@ -9,7 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "@expo/webpack-config": "^0.16.19",
+    "@expo/webpack-config": "^0.17.0",
     "expo": "~46.0.9",
     "expo-blur": "~11.2.0",
     "expo-font": "~10.2.0",

@@ -1,6 +1,10 @@
 import { Image, Text, View } from "react-native";
-import { ThreeStyle } from "./style";
 import { Area, Chart, Line, VerticalAxis } from "react-native-responsive-linechart";
+import { mockChipsDetail } from "../../mockData";
+import { Chips } from "../../Components/Chips/Chips";
+
+import { ThreeStyle } from "./style";
+import { ButtonTouchable } from "../../Components/ButtonTouchable/ButtonTouchable";
 
 export const Three = () => {
 	return(
@@ -31,7 +35,7 @@ export const Three = () => {
 						{ x: 0, y: 12 },
 						{ x: 1, y: 7 },
 						{ x: 2, y: 6 },
-						{ x: 3, y: 8 },
+						{ x: 3, y: 1 },
 						{ x: 4, y: 10 },
 						{ x: 5, y: 8 },
 						{ x: 6, y: 12 },
@@ -40,14 +44,31 @@ export const Three = () => {
 						{ x: 9, y: 13.5 },
 						{ x: 10, y: 18 },
 					]}
-					padding={{ left: 40, bottom: 20, right: 20, top: 20 }}
+					padding={{ top: 42 }}
 					xDomain={{ min: -2, max: 10 }}
 					yDomain={{ min: 0, max: 20 }}
 				>
-					<VerticalAxis tickCount={5} theme={{ labels: { visible: false }}} />
-					<Area theme={{ gradient: { from: { color: '#B1CE01' }, to: { color: '#B1CE01', opacity: 0.1 } }}} />
+					<VerticalAxis
+						tickCount={5}
+						theme={{
+							labels: { visible: false },
+							grid: {stroke:{color: 'rgba(68, 68, 68, 0.3)',}},
+							axis:{visible: false}
+					}} />
+					<Area theme={{ gradient: { from: { color: '#B1CE01', opacity: 0.5 }, to: { color: '#171717', opacity: 0.5 } }}} />
 					<Line theme={{ stroke: { color: '#B1CE01', width: 1 }}} />
 				</Chart>
+				<View style={ThreeStyle.chipsDetail}>
+					<Chips data={mockChipsDetail} />
+				</View>
+				<View style={ThreeStyle.buttonDetailBlock}>
+					<ButtonTouchable
+						text={'Sell'}
+					/>
+					<ButtonTouchable
+						text={'Buy'}
+					/>
+				</View>
 			</View>
 		</>
 	)

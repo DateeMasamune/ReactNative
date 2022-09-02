@@ -87,3 +87,18 @@ export const mockChips = [
 	'Funds',
 	'Futures',
 ]
+
+export const mockChipsDetail = [
+	'Day',
+	'Month',
+	'6 months',
+	'1 year',
+	'Day',
+	'Month',
+	'6 months',
+	'1 year',
+	'Day',
+	'Month',
+	'6 months',
+	'1 year',
+]
