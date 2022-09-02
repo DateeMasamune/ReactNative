@@ -3,14 +3,11 @@ import { StyleSheet } from "react-native";
 export const ThreeStyle = StyleSheet.create({
 	detailPageHeader:{
 		flexDirection: 'row',
+		alignItems: 'center',
 		justifyContent: 'space-between',
 		paddingTop: 60,
 		paddingLeft: 24,
 		paddingRight: 24
-	},
-	arrowBack:{
-		height: 14,
-		width: 7,
 	},
 	detailPageTitle:{
 		fontSize: 16,

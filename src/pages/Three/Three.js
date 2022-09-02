@@ -5,12 +5,13 @@ import { Chips } from "../../Components/Chips/Chips";
 
 import { ThreeStyle } from "./style";
 import { ButtonTouchable } from "../../Components/ButtonTouchable/ButtonTouchable";
+import { ArrowBack } from "../../Components/ArrowBack/ArrowBack";
 
 export const Three = () => {
 	return(
 		<>
 			<View style={ThreeStyle.detailPageHeader}>
-				<Image style={ThreeStyle.arrowBack} source={require('../../../assets/arrowBack.png')}></Image>
+				<ArrowBack />
 				<View  style={ThreeStyle.detailPageTitleContainer}>
 					<Text style={ThreeStyle.detailPageTitle}>Google</Text>
 					<Text style={ThreeStyle.detailPageDescription}>Alphabet Class A </Text>
