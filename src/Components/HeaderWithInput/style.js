@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export const HeaderWithInputStyle = StyleSheet.create({
 	titleBlock:{
-		paddingTop: 60,
+		paddingTop: 28,
 		paddingLeft: 24,
 		paddingBottom: 32
 	},

@@ -1,8 +1,10 @@
 import { View, Image, Text } from "react-native-web";
 import { OneStyle } from "../../pages/One/style";
 
-export const ItemAsset = ({ icon, name, cutName, dollar, percent }) => (
-  <View style={OneStyle.itemAsset}>
+export const ItemAsset = ({ icon, name, cutName, dollar, percent, navigation, id }) => (
+  <View
+		onTouchStart={() => navigation.navigate('Three', { id })}
+		style={OneStyle.itemAsset}>
     <View style={OneStyle.iconWithTextAsset}>
       <Image style={OneStyle.iconAsset} source={icon}></Image>
       <View style={OneStyle.nameAssetBlock}>

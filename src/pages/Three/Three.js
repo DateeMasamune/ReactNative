@@ -1,30 +1,32 @@
 import { Image, Text, View } from "react-native";
 import { Area, Chart, Line, VerticalAxis } from "react-native-responsive-linechart";
-import { mockChipsDetail } from "../../mockData";
+import { mockAssets, mockChipsDetail } from "../../mockData";
 import { Chips } from "../../Components/Chips/Chips";
 
 import { ThreeStyle } from "./style";
 import { ButtonTouchable } from "../../Components/ButtonTouchable/ButtonTouchable";
 import { ArrowBack } from "../../Components/ArrowBack/ArrowBack";
 
-export const Three = () => {
+export const Three = ({route, navigation}) => {
+	const { id: idCurrentPage } = route.params
+	const currentPage = mockAssets.find(({id}) => id === idCurrentPage)
 	return(
 		<>
 			<View style={ThreeStyle.detailPageHeader}>
-				<ArrowBack />
+				<ArrowBack navigation={navigation} />
 				<View  style={ThreeStyle.detailPageTitleContainer}>
-					<Text style={ThreeStyle.detailPageTitle}>Google</Text>
-					<Text style={ThreeStyle.detailPageDescription}>Alphabet Class A </Text>
+					<Text style={ThreeStyle.detailPageTitle}>{currentPage.name}</Text>
+					<Text style={ThreeStyle.detailPageDescription}>{currentPage.cutName}</Text>
 				</View>
 				<Image style={ThreeStyle.detailPageHeart} source={require('../../../assets/Heart.png')}></Image>
 			</View>
 			<View style={ThreeStyle.detailPageContent}>
-				<Image style={ThreeStyle.detailPageContentIcon} source={require('../../../assets/google.png')}/>
+				<Image style={ThreeStyle.detailPageContentIcon} source={currentPage.icon}/>
 				<Text style={ThreeStyle.detailPageContentPercent}>
-					+2,28%
+					{currentPage.percent}%
 				</Text>
 				<Text style={ThreeStyle.detailPageContentDollar}>
-					$ 1,773,63
+					$ {currentPage.dollar}
 				</Text>
 			</View>
 			<View style={ThreeStyle.detailPageChartContainer}>

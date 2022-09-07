@@ -5,7 +5,7 @@ export const FiveStyle = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: 60,
+    marginTop: 28,
     paddingLeft: 24,
     paddingRight: 24
 

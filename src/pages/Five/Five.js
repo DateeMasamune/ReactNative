@@ -3,11 +3,11 @@ import { View } from "react-native-web"
 import { ArrowBack } from "../../Components/ArrowBack/ArrowBack"
 import { FiveStyle } from "./style"
 
-export const Five = () => {
+export const Five = ({navigation}) => {
 	return (
 		<>
 			<View style={FiveStyle.supportContainer}>
-				<ArrowBack />
+				<ArrowBack navigation={navigation} />
 				<View style={FiveStyle.supportIconBlock}>
 					<View style={FiveStyle.supportIconShape}>
 						<Image style={FiveStyle.supportIcon} source={require('../../../assets/help.png')} />

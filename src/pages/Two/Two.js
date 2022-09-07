@@ -4,7 +4,7 @@ import { Chips } from "../../Components/Chips/Chips";
 import { mockAssets, mockChips } from "../../mockData";
 import { HeaderWithInput } from "../../Components/HeaderWithInput/HeaderWithInput";
 
-export const Two = () => {
+export const Two = ({navigation}) => {
 	return(
 		<>
 			<HeaderWithInput title={'Search'}/>
@@ -23,9 +23,11 @@ export const Two = () => {
 					dollar={dollar}
 					percent={percent}
 					key={id}
+					navigation={navigation}
+					id={id}
 				/>
 			))}
-			<BottomMenu />
+			<BottomMenu navigation={navigation} />
 		</>
 	)
 }
