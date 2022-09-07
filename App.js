@@ -1,32 +1,30 @@
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import { useCustomFonts } from "./src/hooks/useCustomFonts";
-import { One } from "./src/pages/One/One";
-import { Two } from "./src/pages/Two/Two";
-import { Three } from "./src/pages/Three/Three";
-import { Four } from "./src/pages/Four/Four";
-import { Five } from "./src/pages/Five/Five";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { BottomMenuProvider } from "./src/Components/BottomMenuContext/BottomMenuContext";
+import { pages } from "./src/mockData";
+import { MyTheme, stylesMainContainer } from "./src/theme";
 
 export default function App() {
 	const { fontsLoaded, onLayoutRootView } = useCustomFonts()
-
+	const {Screen, Navigator} = createNativeStackNavigator();
 	if (!fontsLoaded) {
 		return null;
 	}
 
 	return (
-		<View style={styles.container} onLayout={onLayoutRootView}>
-			{/* <One /> */}
-			{/* <Two /> */}
-			{/* <Three /> */}
-			{/* <Four /> */}
-			<Five />
-		</View>
+		<BottomMenuProvider>
+			<View style={stylesMainContainer.container} onLayout={onLayoutRootView}>
+				<NavigationContainer theme={MyTheme}>
+					<Navigator>
+						{pages.map(({name,component, id}) => (
+							component && <Screen key={id} name={name} component={component} />
+						))}
+					</Navigator>
+				</NavigationContainer>
+			</View>
+		</BottomMenuProvider>
+
 	);
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: '#171717',
-	},
-});

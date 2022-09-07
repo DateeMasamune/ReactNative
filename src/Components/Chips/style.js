@@ -5,7 +5,8 @@ export const ChipsStyle = StyleSheet.create({
 		flexDirection: 'row',
 		marginTop: 16,
 		flexGrow: 0,
-		paddingLeft: 24
+		paddingLeft: 24,
+		flexShrink: 0
 	},
 	chipWrapper: {
 		height: 32,

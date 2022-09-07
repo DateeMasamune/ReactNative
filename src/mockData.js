@@ -1,3 +1,14 @@
+import { bottomMenu } from "./Components/BottomMenu/style";
+import { Setting } from "./Components/Icons/Setting/Setting";
+import { Chat } from "./Components/Icons/Chat/Chat";
+import { Chart } from "./Components/Icons/Chart/Chart";
+import { Home } from "./Components/Icons/Home/Home";
+import { Two } from "./pages/Two/Two";
+import { Three } from "./pages/Three/Three";
+import { Four } from "./pages/Four/Four";
+import { Five } from "./pages/Five/Five";
+import { One } from "./pages/One/One";
+
 export const mockAssets = [
 	{
 		icon: require('../assets/apple.png'),
@@ -211,5 +222,64 @@ export const mockDialogLines = [
 		count: 3,
 		online: true,
 		id: 12
+	},
+]
+
+export const bottomMenuItems = [
+	{
+		id: 1,
+		page: 'One',
+		style: bottomMenu.homeIcon,
+		color: '#757575',
+		Component: Home,
+	},
+	{
+		id: 2,
+		page: 'Two',
+		style: bottomMenu.chartIcon,
+		color: '#757575',
+		Component: Chart
+	},
+	{
+		id: 3,
+		page: 'Four',
+		style: bottomMenu.chatIcon,
+		color: '#757575',
+		Component: Chat
+	},
+	{
+		id: 4,
+		page: 'Five',
+		style: bottomMenu.settingIcon,
+		color: '#757575',
+		Component: Setting
+	},
+]
+
+export const pages = [
+	{
+		id: 1,
+		name: 'One',
+		component: One
+	},
+	{
+		id: 2,
+		name: 'Two',
+		component: Two
+	},
+	{
+		id: 3,
+		name: 'Three',
+		component: Three
+	},
+	{
+		id: 4,
+		name: 'Four',
+		component: Four
+	},
+	{
+		id: 5,
+		name: 'Five',
+		component: Five
 	},
 ]

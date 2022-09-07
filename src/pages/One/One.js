@@ -1,12 +1,12 @@
 import { Image, Text, View } from "react-native";
+import { ButtonTouchable } from "../../Components/ButtonTouchable/ButtonTouchable";
 import { BottomMenu } from "../../Components/BottomMenu/BottomMenu";
 import { ItemAsset } from "../../Components/ItemAsset/ItemAsset";
 import { mockAssets } from "../../mockData";
 
 import { OneStyle } from "./style";
-import { ButtonTouchable } from "../../Components/ButtonTouchable/ButtonTouchable";
 
-export const One = () => (
+export const One = ({navigation}) => (
 	<>
 		<View style={OneStyle.header}>
 			<Image style={OneStyle.avatar} source={require('../../../assets/Avatar.png')} />
@@ -42,8 +42,10 @@ export const One = () => (
 				dollar={dollar}
 				percent={percent}
 				key={id}
+				navigation={navigation}
+				id={id}
 			/>
 		)}
-		<BottomMenu />
+		<BottomMenu navigation={navigation} />
 	</>
 )

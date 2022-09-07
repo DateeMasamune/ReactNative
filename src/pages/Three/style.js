@@ -5,7 +5,7 @@ export const ThreeStyle = StyleSheet.create({
 		flexDirection: 'row',
 		alignItems: 'center',
 		justifyContent: 'space-between',
-		paddingTop: 60,
+		paddingTop: 28,
 		paddingLeft: 24,
 		paddingRight: 24
 	},

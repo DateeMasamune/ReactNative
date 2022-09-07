@@ -3,7 +3,7 @@ import { mockDialogLines } from "../../mockData";
 import { ChatDialogLine } from "../../Components/ChatDialogLine/ChatDialogLine";
 import { BottomMenu } from "../../Components/BottomMenu/BottomMenu";
 
-export const Four = () => {
+export const Four = ({navigation}) => {
 	return(
 		<>
 			<HeaderWithInput title={'Chats'} />
@@ -18,7 +18,7 @@ export const Four = () => {
 					online={online}
 				/>
 			))}
-			<BottomMenu />
+			<BottomMenu navigation={navigation} />
 		</>
 	)
 }
